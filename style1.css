@@ -1,0 +1,139 @@
+html, body{
+    padding:0;
+    margin:0;
+}
+
+.nav{
+    position:fixed;
+    padding:10px;
+    top:0;
+    left:0;
+    right:0;
+    background-color: black;
+}
+
+.footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: black;
+}
+
+.footer-text{
+    color:white;
+    text-align: center;
+}
+
+.navlist{
+    list-style: none;
+    float:left;
+}
+
+li{
+    display: inline;
+    margin:20px;
+}
+
+li>a{
+    color: white;
+    text-decoration: none;
+}
+
+a>img{
+    float:left;
+    margin-left: 100px;
+}
+
+.searchform{
+    float:right;
+    margin-right:100px;
+    margin-top:10px;
+}
+
+.searchbox{
+    height:25px;
+    width:150px;
+    border-radius:10px;
+}
+.submitbutton{
+    height:30px;
+    width:90px;
+    border-radius:10px;
+    background-color:transparent;
+    border-style:solid;
+    border-color:white;
+    color:white;
+
+}
+
+.content1{
+    background-color: #1ac400;
+}
+
+.content2{
+    background-color: royalblue;
+}
+
+.content3{
+    background-color: white;
+}
+
+.topic1{
+    padding: 100px;
+}
+
+.topic2{
+    padding: 100px;
+}
+
+.topic3{
+    padding: 100px;
+}
+
+.imagetopic1{
+    float:left;
+    margin-right:30px;
+    margin-bottom:20px;
+}
+
+.imagetopic2{
+    float:left;
+    margin-right:30px;
+    margin-bottom:20px;
+}
+
+.separator{
+    margin-left:330px;
+}
+
+.imagetopic3{
+    float:right;
+    margin-left:30px;
+    margin-bottom:20px;
+}
+
+.tablediv{
+    margin-top:150px;
+    margin-left:100px;
+}
+
+.tablestyle{
+    width:80%;
+}
+
+table, th, td{
+    border: 1px solid ;
+    border-collapse: collapse;
+    height:50px;
+    border-left: none;
+    border-right: none;
+    border-color: lightgrey;
+    text-align:center;
+}
+
+th{
+    background-color:darkblue;
+    color:white;
+    border-radius: 20px;
+}
