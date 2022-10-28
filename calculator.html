@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+
+    <script>
+        function calculate(){
+            var a = document.getElementById("firstoperand").value;
+            var b = document.getElementById("secondoperand").value;
+            var c = document.getElementById("operator").value;
+            var answer = 0;
+            a = parseInt(a);
+            b = parseInt(b);
+
+            switch (c) {
+                case "+":
+                    answer = a + b;
+                    break;
+                case "-":
+                    answer = a - b;
+                    break;
+                case "*":
+                    answer = a * b;
+                    break;
+                case "/":
+                    answer = a / b;
+                    break;
+                default:
+                    document.getElementById("ans2").innerHTML = "ERROR : Insert one of these operators: + - * /";
+                    break;
+            }
+            document.getElementById("ans").innerHTML = answer;
+        }
+    </script>
+
+</head>
+<body>
+
+<div>
+    <h1>Calculator</h1>
+    <hr>
+    <p>Input your numbers and operation</p>
+    <input placeholder="First number" type="number" id="firstoperand">
+    <input placeholder="Operation + - * / " type="text" id="operator">
+    <input placeholder="Second number" type="number" id="secondoperand">
+    <input type="submit" id="calculate" value="Calculate" onclick="calculate();">
+    <p>Ans</p>
+    <p id="ans"></p>
+    <p id="ans2"></p>
+
+</div>
+
+</body>
+</html>
