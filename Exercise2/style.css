@@ -1,0 +1,15 @@
+.table1{
+    margin : auto;
+    border-style: solid;
+    border-collapse: collapse;
+    width:100%;
+}
+
+th, td{
+    border: 1px solid ;
+    padding:5px;
+}
+
+th{
+    background-color : aqua;
+}
