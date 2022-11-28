@@ -26,7 +26,7 @@ function completeCall(){
 function successCall(data) {
     console.log("Success");
     let dataSet = data.users;
-    let row = 2;
+    let row = 3;
     let pages = Math.ceil(dataSet.length / row);
     let state = {
         'currentPage':1,
@@ -76,7 +76,7 @@ function successCall(data) {
         if (left<=0) {left = startPage}
         if (right>=pages) {right = endPage}
 
-        sequence += `<span class='pageNum'> ${startPage} </span>`
+        sequence += `<span class='pageNum' id='${startPage}'> ${startPage} </span>`
 
         if(currentPage !== startPage && currentPage !== startPage+1 && currentPage !== startPage+2 && currentPage !== startPage+3){
             sequence += `<span> ... </span>`
@@ -84,7 +84,7 @@ function successCall(data) {
 
         for (let page = left; page <= right; page++) {
             if(page!==startPage && page!==endPage){
-                sequence += `<span class='pageNum'> ${page} </span>`
+                sequence += `<span class='pageNum' id='${page}'> ${page} </span>`
             }
         }
 
@@ -92,21 +92,18 @@ function successCall(data) {
             sequence += `<span> ... </span>`
         }
 
-        sequence += `<span class='pageNum'> ${endPage} </span>`
+        sequence += `<span class='pageNum' id='${endPage}'> ${endPage} </span>`
 
         $('#paginationButtons').html(
             sequence
         )
 
+        $("#"+state.currentPage).css("border","solid blue")
+
         $(".pageNum").click(function() {
-            //debugger
-
-            $(".pageNum").css({'border': 'none'})
-            $(this).css({'border': '1px solid blue'})
-            //console.log($(".pageNum").css('border'));
-
             state.currentPage = parseInt((this).innerText);
             pagination();
+
         });
     }
     pagination();
